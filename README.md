@@ -1,7 +1,7 @@
 ### 1、项目介绍，基于CMGAN的音频增强，对音频噪音进行去除
 **文件结构**
 ```
-src #核心代码
+src                         #核心代码
 
 |-utils.py                  #模型参数处理函数
 |-train.py                  #训练代码
@@ -16,7 +16,7 @@ src #核心代码
     |-generator.py
 |-data                      #加载数据集代码
     |-dataloader.py
-|-tools                     #工具文件
+|-tools                     #工具文件，对测试集结果进行可视化等
     |-compute_metrics.py
     |-Noisy_metrics_results
 
