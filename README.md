@@ -23,7 +23,7 @@ src                         #核心代码
 LICENSE
 README.md
 ```
-### 2、参考https://github.com/ruizhecao96/CMGAN/tree/main 项目，此项目为分布式训练，本项目改为单机训练主要修改如下
+### 2、参考CMGAN项目，此项目为分布式训练，本项目改为单机训练主要修改如下
 
 1. **将训练代码src/train.py进行修改，把分布式训练修改为单GPU**
 
