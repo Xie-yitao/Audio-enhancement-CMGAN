@@ -2,7 +2,7 @@ import os
 from pydub import AudioSegment
 
 # 指定 ffmpeg 和 ffprobe 的路径
-# os.environ["PATH"] += os.pathsep + r"C:\path\to\ffmpeg\bin" #需要修改为实际的路径
+# os.environ["PATH"] += os.pathsep + r"C:\path\to\ffmpeg\bin" #需要修改为实际的路径,一下为我的路径，需要修改为自己的
 os.environ["PATH"] += os.pathsep + r"D:\兼职\基于CMGAN的音频增强（降噪）\ffmpeg-2025-03-31-git-35c091f4b7-essentials_build\bin"
 
 def convert_audio_files(input_folder, output_folder):
@@ -53,8 +53,8 @@ def convert_audio_files(input_folder, output_folder):
 
 if __name__ == "__main__":
     # 输入和输出文件夹路径（根据需要修改）
-    input_folder = "testdata"  # 输入文件夹
-    output_folder = "处理后的文件"   # 输出文件夹
+    input_folder = "input_dir"  # 输入文件夹
+    output_folder = "output_dir"   # 输出文件夹
     
     # 执行转换
     convert_audio_files(input_folder, output_folder)
