@@ -36,6 +36,6 @@ def split_wav(input_file, output_dir, segment_length=10000):
         print(f"已保存: {output_file}")
 
 # 示例用法
-input_file = "./testdata/答辩记录.wav"  # 输入的 30 分钟 WAV 文件
-output_dir = "output_segments"  # 输出目录
+input_file = "input_path"  # 修改为你的输入路径
+output_dir = "out_dir"  # 修改为你的输出路径
 split_wav(input_file, output_dir)
