@@ -1,4 +1,4 @@
-### 1、项目介绍，基于CMGAN的音频增强，对音频噪音进行去除
+### 1、项目介绍，基于CMGAN的音频增强，主要对音频背景人声噪音进行去除（针对单声道语音）
 **文件结构**
 ```
 src                         #核心代码
@@ -149,6 +149,7 @@ def load_data(ds_dir, batch_size, n_cpu, cut_len):
 ## 如何训练:
 
 ### 环境准备在src文件夹中运行:
+python版本：Python 3.10.16 
 ```pip install -r requirements.txt```
 
 ### 下载数据集:
