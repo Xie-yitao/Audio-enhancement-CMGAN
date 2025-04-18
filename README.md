@@ -181,7 +181,7 @@ python3 evaluation.py --test_dir <dir to VCTK-DEMAND/test> --model_path <path to
 2. 运行音频切分代码（audio_segmentation.py	），对音频文件进行切分，方便模型处理
 2. 使用如下指令运行推理代码：
 ```
-python predict.py --model_path <path to the best ckpt> --audio_path .<path to audio or dir to audio>
+python predict.py --model_path <path to the best ckpt> --input_path .<path to audio or dir to audio>
 ```
 
 ### 第三方依赖项
