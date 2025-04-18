@@ -8,7 +8,7 @@ import soundfile as sf
 import torch
 import torchaudio.functional as F
 from tqdm import tqdm
-
+from scipy.io.wavfile import write
 # 定义参数配置
 INFER_CONFIG = {
     # 音频处理参数
@@ -61,7 +61,9 @@ def enhance_one_track(
     if sr != config["target_sample_rate"]:
         noisy = F.resample(noisy, orig_freq=sr, new_freq=config["target_sample_rate"])
         sr = config["target_sample_rate"]
-    
+    # 如果音频是单通道，复制到双通道
+    if noisy.shape[0] == 1:
+        noisy = torch.cat([noisy, noisy], dim=0)
     # 移动到GPU
     noisy = noisy.cuda()
     
@@ -191,6 +193,7 @@ def enhance_one_track(
             est_audio = est_audio.T  # 转为 (time, channels)
         
         # 保存音频
+        # write(saved_path, est_audio, sr)
         sf.write(saved_path, est_audio, sr)
         
         return est_audio, saved_path
